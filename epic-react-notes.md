@@ -1,5 +1,7 @@
 # Epic React notes
 
+[TOC]
+
 # React Fundamentals
 
 ## [Javascript to Know For React](https://kentcdodds.com/blog/javascript-to-know-for-react)
@@ -98,7 +100,7 @@ Using the element's index as the key removes the warnings because the keys will 
 items.map((item, index) => <div key={index} />)
 ```
 
-For example, say our map has crated an element with `key={4}`. If an earlier element is removed from the array, then on rerender that key would no longer be `4`, it would be `3`. In this scenario we haven't actually provided React with a way to track the elements in the array, we've merely circumvented the key warning. 
+For example, say our map has created an element with `key={4}`. If an earlier element is removed from the array, then on rerender that key would no longer be `4`, it would be `3`. In this scenario we haven't actually provided React with a way to track the elements in the array, we've merely circumvented the key warning. 
 
 In other words, we *have* provided keys and they *are* unique - they just happen to be completely useless.
 
@@ -651,7 +653,7 @@ Instead, the `useEffect` will only run when `useCallBack` gives us back a new `u
 >
 > 🦉 A common question with this is: "Why don’t we just wrap every function in `useCallback`?" You can read about this in my blog post [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback).
 
-Kent C Dodds's article linked above ([When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)) does a good job of explaining how using `useCallback` isn't always the best option. While `useCallback` is used for performance gains, `useCallback` comes with it's own costs which can in fact outweigh any benefits when it is used unnecessarily. Kent provides the following examples to demonstrate this point:
+Kent C Dodds's article linked above ([When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)) does a good job of explaining how using `useCallback` isn't always the best option. While `useCallback` is used for performance gains, `useCallback` comes with its own costs which can in fact outweigh any benefits when it is used unnecessarily. Kent provides the following examples to demonstrate this point:
 
 No `useCallback`:
 
